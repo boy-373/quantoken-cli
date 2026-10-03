@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantoken-cli"
+version = "1.0.0"
+description = "QuantumToken 平台官方命令行工具 - AI对话/联网问答/AI出图/网页解析/余额查询"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "QuantumToken" }]
+keywords = ["quantoken", "ai", "cli", "chat", "image", "qwen", "seedream"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+qt = "qt_cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["qt_cli*"]
